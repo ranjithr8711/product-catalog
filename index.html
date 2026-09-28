@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Product Catalog</h1>
+        <p>Find your favorite products</p>
+    </header>
+
+    <main>
+
+        <section class="filters">
+
+            <form id="filterForm">
+
+                <div class="form-group">
+                    <label for="search">Search Products</label>
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Search products..."
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="all">All Categories</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Shoes">Shoes</option>
+                        <option value="Accessories">Accessories</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Maximum Price</label>
+                    <input
+                        type="number"
+                        id="price"
+                        placeholder="Enter maximum price"
+                        min="0"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="sort">Sort By</label>
+                    <select id="sort">
+                        <option value="default">Default</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="catalog-section">
+
+            <h2>Products</h2>
+
+            <div id="productContainer" class="product-grid"></div>
+
+            <p id="noProducts" class="no-products">
+                No products found.
+            </p>
+
+        </section>
+
+        <section class="cart-section">
+
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+
+                <button id="emptyCart" type="button">
+                    Empty Cart
+                </button>
+            </div>
+
+            <div id="cartContainer" class="cart-container"></div>
+
+            <div class="cart-summary">
+                <h3>Cart Total: ₹<span id="cartTotal">0.00</span></h3>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Product Catalog &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
